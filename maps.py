@@ -41,7 +41,7 @@ Arc = st.sidebar.number_input('Arc Angle', 0, 200,100)
 
 zoom_level = st.slider('Zoom', 0, 200)
 
-df = pd.read_excel (r'/Users/srdjansumarac/Desktop/map.xlsx', sheet_name = target)
+df = pd.read_excel (os.getcwd()+"/map.xlsx", sheet_name = target)
 
 shape_id = df['shape_id']
 shapes = df['shapes'].dropna()
