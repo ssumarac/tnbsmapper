@@ -3,6 +3,9 @@ import numpy as np
 import pandas as pd
 from matplotlib.ticker import (AutoMinorLocator, FixedLocator)
 import streamlit as st
+import os
+
+os.getcwd()
 
 st.title("MER Mapping Software")
 st.subheader('By Srdjan Sumarac')
