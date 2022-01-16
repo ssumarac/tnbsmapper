@@ -37,15 +37,16 @@ Z = st.sidebar.number_input('Z', 80.0, 120.0,100.0,0.5)
 Ring = st.sidebar.number_input('Ring Angle', 0, 90,60)
 Arc = st.sidebar.number_input('Arc Angle', 0, 180,100)
 
-zoom_level = st.slider('Zoom', 0, 200)
+zoom_level = st.slider('Zoom (%)', 0, 100)
 
-#df = pd.read_excel (os.getcwd()+"/map.xlsx", sheet_name = target)
+zoom_level = zoom_level*2
 
-df = pd.read_csv(os.getcwd()+"/map.csv")
-
-st.write(os.getcwd())
-
-st.write(os.getcwd()+"/map.csv")
+if target == "STN":
+    df = pd.read_csv(os.getcwd()+"/STN_map.csv")
+elif target == "GPi":
+    df = pd.read_csv(os.getcwd()+"/GPi_map.csv")
+else:
+    df = pd.read_csv(os.getcwd()+"/VIM_map.csv")
 
 shape_id = df['shape_id']
 shapes = df['shapes'].dropna()
