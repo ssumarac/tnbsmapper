@@ -17,6 +17,7 @@ target = st.sidebar.selectbox('Select Target', ['STN', 'GPi', 'VIM'])
 invert = st.sidebar.selectbox("Select normal/inverted view", ["Normal","Inverted"])
 ticks = st.sidebar.selectbox("Show Ticks", ["Yes","No"])
 background = st.sidebar.selectbox("Select black/white background", ["Black","White"])
+which_trajectroy = st.sidebar.selectbox("Select trajectory line type", ["Angled","Not Angled"])
 
 col1, col2 = st.columns(2)
 
@@ -152,9 +153,10 @@ AC_Z_coord = Z_ticks_convert_raw[np.where(Z_ticks_convert == AC_Z)[0][0]]
 PC_Y_coord = Y_ticks_convert_raw[np.where(Y_ticks_convert == PC_Y)[0][0]]
 PC_Z_coord = Z_ticks_convert_raw[np.where(Z_ticks_convert == PC_Z)[0][0]]
 
-trajectory_line_length = 25*np.sin(np.deg2rad((180-Arc)/2))*192/AC_PC_length
-
-#trajectory_line_length = 25*192/AC_PC_length
+if which_trajectroy == "Angled":
+    trajectory_line_length = 25*np.sin(np.deg2rad((180-Arc)/2))*192/AC_PC_length
+else:
+    trajectory_line_length = 25*192/AC_PC_length
 
 # ax.axes.xaxis.set_ticklabels([])
 # ax.axes.yaxis.set_ticklabels([])
