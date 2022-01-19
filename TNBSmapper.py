@@ -10,7 +10,7 @@ from PIL import Image
 import matplotlib as mpl
 
 st.title("TNBS: MER Mapping Software")
-st.info('By Srdjan Sumarac/nIf any issues encountered please email me at sumaracsrdjan@gmail.com')
+st.info('By Srdjan Sumarac (E: sumaracsrdjan@gmail.com)')
 st.image(Image.open('tnbs_logo.png'),width=150)
 
 target = st.sidebar.selectbox('Select Target', ['STN', 'GPi', 'VIM'])
