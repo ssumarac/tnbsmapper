@@ -191,7 +191,7 @@ for i in range(51):
         
         
         if i == 35:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(10), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(10),bbox=dict(facecolor='black'), fontsize=6)
         elif i == 34:
             ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(9), fontsize=6)
         elif i == 33:
@@ -237,7 +237,7 @@ for i in range(51):
         ax.plot(trajectory_end_Y+i*trajetory_tick_Y, trajectory_end_Z+i*trajetory_tick_Z, 'red', marker=(2, 0, 180-Ring), markersize=5)
         
         if i == 35:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(10), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(10),bbox=dict(facecolor='white') ,fontsize=6)
         elif i == 34:
             ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(9), fontsize=6)
         elif i == 33:
