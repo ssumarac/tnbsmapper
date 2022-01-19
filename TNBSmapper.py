@@ -21,7 +21,7 @@ background = st.sidebar.selectbox("Select black/white background", ["Black","Whi
 which_trajectroy = st.sidebar.selectbox("Select trajectory line type", ["Angled","Not Angled"])
 
 if background == "Black":
-    mpl.rcParams['text.color'] = "lightred"
+    mpl.rcParams['text.color'] = "red"
 else:
     mpl.rcParams['text.color'] = "darkred"
 
