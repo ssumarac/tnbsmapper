@@ -188,10 +188,10 @@ for i in range(51):
     
     if invert == "Inverted":
         ax.plot(trajectory_end_Y+i*trajetory_tick_Y, trajectory_end_Z+i*trajetory_tick_Z, 'red', marker=(2, 0, Ring), markersize=5)
-        ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(i), fontsize=7)
+        ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(i), fontsize=6)
     else:
         ax.plot(trajectory_end_Y+i*trajetory_tick_Y, trajectory_end_Z+i*trajetory_tick_Z, 'red', marker=(2, 0, 180-Ring), markersize=5)
-        ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(i), fontsize=5)
+        ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(i), fontsize=6)
     
     
     
