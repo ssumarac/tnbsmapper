@@ -21,9 +21,9 @@ background = st.sidebar.selectbox("Select black/white background", ["Black","Whi
 which_trajectroy = st.sidebar.selectbox("Select trajectory line type", ["Angled","Not Angled"])
 
 if background == "Black":
-    mpl.rcParams['text.color'] = "red"
+    mpl.rcParams['text.color'] = "white"
 else:
-    mpl.rcParams['text.color'] = "darkred"
+    mpl.rcParams['text.color'] = "black"
 
 col1, col2 = st.columns(2)
 
@@ -339,9 +339,9 @@ for i in range(1,len(shapes)):
     y_rot = np.sin(np.deg2rad(rotation_angle))*x + np.cos(np.deg2rad(rotation_angle))*y
               
     if background == "Black":                                                
-        ax.plot(x_rot+x_shift, y_rot+y_shift, 'white', linewidth=0.5) 
+        ax.plot(x_rot+x_shift, y_rot+y_shift, 'gray', linewidth=0.5) 
     else:
-        ax.plot(x_rot+x_shift, y_rot+y_shift, 'black', linewidth=0.5) 
+        ax.plot(x_rot+x_shift, y_rot+y_shift, 'gray', linewidth=0.5) 
 
 if invert == "Normal":
     ax.invert_xaxis()
