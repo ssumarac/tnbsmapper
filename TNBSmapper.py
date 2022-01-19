@@ -10,7 +10,7 @@ from PIL import Image
 
 st.title("TNBS: MER Mapping Software")
 st.info('By Srdjan Sumarac')
-st.image(Image.open('tnbs_logo.png'),width=100)
+st.image(Image.open('tnbs_logo.png'))
 
 target = st.sidebar.selectbox('Select Target', ['STN', 'GPi', 'VIM'])
 
