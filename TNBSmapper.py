@@ -238,7 +238,7 @@ x_shift = MCP[0] - x_shift_factor
 y_shift = MCP[1] - y_shift_factor
 
 @st.experimental_memo
-def plot_map(shapes,df,rotation_angle, x_shift, y_shift, inver, background):
+def plot_map(shapes,df,rotation_angle, x_shift, y_shift, invert, background):
 
     for i in range(1,len(shapes)):
         
@@ -256,7 +256,7 @@ def plot_map(shapes,df,rotation_angle, x_shift, y_shift, inver, background):
     if invert == "Normal":
         ax.invert_xaxis()
 
-plot_map(shapes,df,rotation_angle, x_shift, y_shift, invert)
+plot_map(shapes,df,rotation_angle, x_shift, y_shift, invert,background)
 
 st.write(fig)
 
