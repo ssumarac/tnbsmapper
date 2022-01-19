@@ -188,13 +188,97 @@ for i in range(51):
     
     if invert == "Inverted":
         ax.plot(trajectory_end_Y+i*trajetory_tick_Y, trajectory_end_Z+i*trajetory_tick_Z, 'red', marker=(2, 0, Ring), markersize=5)
-        ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(i), fontsize=6)
+        
+        
+        if i == 35:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(10), fontsize=6)
+        elif i == 34:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(9), fontsize=6)
+        elif i == 33:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(8), fontsize=6)
+        elif i == 32:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(7), fontsize=6)
+        elif i == 31:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(6), fontsize=6)
+        elif i == 30:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(5), fontsize=6)
+        elif i == 29:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(4), fontsize=6)
+        elif i == 28:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(3), fontsize=6)
+        elif i == 27:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(2), fontsize=6)
+        elif i == 26:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(1), fontsize=6)
+        elif i == 25:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(0), fontsize=6)
+        elif i == 24:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(-1), fontsize=6)
+        elif i == 23:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(-2), fontsize=6)
+        elif i == 22:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(-3), fontsize=6)
+        elif i == 21:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(-4), fontsize=6)
+        elif i == 20:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(-5), fontsize=6)
+        elif i == 19:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(-6), fontsize=6)
+        elif i == 18:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(-7), fontsize=6)
+        elif i == 17:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(-8), fontsize=6)
+        elif i == 16:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(-9), fontsize=6)
+        elif i == 15:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+5,trajectory_end_Z+i*trajetory_tick_Z,str(-10), fontsize=6)
+            
     else:
         ax.plot(trajectory_end_Y+i*trajetory_tick_Y, trajectory_end_Z+i*trajetory_tick_Z, 'red', marker=(2, 0, 180-Ring), markersize=5)
-        ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(i), fontsize=6)
-    
-    
-    
+        
+        if i == 35:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(10), fontsize=6)
+        elif i == 34:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(9), fontsize=6)
+        elif i == 33:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(8), fontsize=6)
+        elif i == 32:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(7), fontsize=6)
+        elif i == 31:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(6), fontsize=6)
+        elif i == 30:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(5), fontsize=6)
+        elif i == 29:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(4), fontsize=6)
+        elif i == 28:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(3), fontsize=6)
+        elif i == 27:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(2), fontsize=6)
+        elif i == 26:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(1), fontsize=6)
+        elif i == 25:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(0), fontsize=6)
+        elif i == 24:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(-1), fontsize=6)
+        elif i == 23:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(-2), fontsize=6)
+        elif i == 22:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(-3), fontsize=6)
+        elif i == 21:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(-4), fontsize=6)
+        elif i == 20:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(-5), fontsize=6)
+        elif i == 19:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(-6), fontsize=6)
+        elif i == 18:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(-7), fontsize=6)
+        elif i == 17:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(-8), fontsize=6)
+        elif i == 16:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(-9), fontsize=6)
+        elif i == 15:
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z,str(-10), fontsize=6)
+
 for i in range(11):
     
     if invert == "Inverted":
