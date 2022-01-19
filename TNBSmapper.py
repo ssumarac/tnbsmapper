@@ -52,12 +52,20 @@ zoom_level = st.slider('Zoom (%)', 0, 100)
 
 zoom_level = zoom_level*2
 
-if target == "STN":
-    df = pd.read_csv(os.getcwd()+"/STN_map.csv")
-elif target == "GPi":
-    df = pd.read_csv(os.getcwd()+"/GPi_map.csv")
-else:
-    df = pd.read_csv(os.getcwd()+"/VIM_map.csv")
+path = os.getcwd()+"/STN_map.csv"
+
+@st.experimental_memo
+def load_data(target,path):
+    if target == "STN":
+        df = pd.read_csv(path)
+    elif target == "GPi":
+        df = pd.read_csv(path)
+    else:
+        df = pd.read_csv(path)
+
+    return df
+
+df = load_data(target,path)
 
 shape_id = df['shape_id']
 shapes = df['shapes'].dropna()
@@ -229,21 +237,26 @@ y_shift_factor = MCP_origin_length*np.sin(np.deg2rad(new_angle))
 x_shift = MCP[0] - x_shift_factor
 y_shift = MCP[1] - y_shift_factor
 
-for i in range(1,len(shapes)):
-    
-    x = df[df['shape_id'] == shapes[i]]['X']
-    y = df[df['shape_id'] == shapes[i]]['Y']
-    
-    x_rot = np.cos(np.deg2rad(rotation_angle))*x - np.sin(np.deg2rad(rotation_angle))*y
-    y_rot = np.sin(np.deg2rad(rotation_angle))*x + np.cos(np.deg2rad(rotation_angle))*y
-              
-    if background == "Black":                                                
-        ax.plot(x_rot+x_shift, y_rot+y_shift, 'white', linewidth=0.5) 
-    else:
-        ax.plot(x_rot+x_shift, y_rot+y_shift, 'black', linewidth=0.5) 
+@st.experimental_memo
+def plot_map(shapes,df,rotation_angle):
 
-if invert == "Normal":
-    ax.invert_xaxis()
+    for i in range(1,len(shapes)):
+        
+        x = df[df['shape_id'] == shapes[i]]['X']
+        y = df[df['shape_id'] == shapes[i]]['Y']
+        
+        x_rot = np.cos(np.deg2rad(rotation_angle))*x - np.sin(np.deg2rad(rotation_angle))*y
+        y_rot = np.sin(np.deg2rad(rotation_angle))*x + np.cos(np.deg2rad(rotation_angle))*y
+                
+        if background == "Black":                                                
+            ax.plot(x_rot+x_shift, y_rot+y_shift, 'white', linewidth=0.5) 
+        else:
+            ax.plot(x_rot+x_shift, y_rot+y_shift, 'black', linewidth=0.5) 
+
+    if invert == "Normal":
+        ax.invert_xaxis()
+
+plot_map(shapes,df,rotation_angle)
 
 st.write(fig)
 
