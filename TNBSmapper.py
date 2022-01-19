@@ -191,7 +191,7 @@ for i in range(51):
     else:
         ax.plot(trajectory_end_Y+i*trajetory_tick_Y, trajectory_end_Z+i*trajetory_tick_Z, 'red', marker=(2, 0, 180-Ring), markersize=5)
     
-    ax.text(trajectory_end_Y+i*trajetory_tick_Y,trajectory_end_Z+i*trajetory_tick_Z,str(i), fontsize=10)
+    ax.text(trajectory_end_Y+i*trajetory_tick_Y+10,trajectory_end_Z+i*trajetory_tick_Z,str(i), fontsize=7)
     
 for i in range(11):
     
