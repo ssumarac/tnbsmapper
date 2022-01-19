@@ -7,6 +7,7 @@ import os
 #import math
 from matplotlib import transforms
 from PIL import Image
+import matplotlib as mpl
 
 st.title("TNBS: MER Mapping Software")
 st.info('By Srdjan Sumarac')
@@ -18,6 +19,11 @@ invert = st.sidebar.selectbox("Select normal/inverted view", ["Normal","Inverted
 ticks = st.sidebar.selectbox("Show Ticks", ["Yes","No"])
 background = st.sidebar.selectbox("Select black/white background", ["Black","White"])
 which_trajectroy = st.sidebar.selectbox("Select trajectory line type", ["Angled","Not Angled"])
+
+if background == "Black":
+    mpl.rcParams['text.color'] = "white"
+else:
+    mpl.rcParams['text.color'] = "black"
 
 col1, col2 = st.columns(2)
 
