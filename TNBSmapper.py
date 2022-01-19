@@ -237,7 +237,7 @@ for i in range(51):
         ax.plot(trajectory_end_Y+i*trajetory_tick_Y, trajectory_end_Z+i*trajetory_tick_Z, 'red', marker=(2, 0, 180-Ring), markersize=5)
         
         if i == 35:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(10), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(10)+str("   ")+str(d10), fontsize=6)
         elif i == 34:
             ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(9), fontsize=6)
         elif i == 33:
@@ -389,4 +389,4 @@ dm8 = col22.text_input("-8.0mm:")
 #dm8_5 = col22.text_input("-8.5mm:")
 dm9 = col22.text_input("-9.0mm:")
 #dm9_5 = col22.text_input("-9.5mm:")
-dm10 = col22.text_input("-10.0mm:")
+#dm10 = col22.text_input("-10.0mm:")
