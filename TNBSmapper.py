@@ -40,7 +40,7 @@ AC_PC_length = np.sqrt((PC_Y-AC_Y)**2 + (PC_Z-AC_Z)**2)
 st.write("AC/PC Length:", round(AC_PC_length,2))
 
 st.subheader("Final Targeting")
-st.write("Enter either left of right coordinates")
+st.write("Enter either left or right coordinates")
 
 X = st.number_input('X', 0.0, 200.0,100.0,0.5)
 Y = st.number_input('Y', 0.0, 200.0,100.0,0.5)
