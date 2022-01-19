@@ -54,7 +54,7 @@ Z = st.number_input('Z', 0.0, 200.0,100.0,0.5)
 Ring = st.number_input('Ring Angle', 0, 90,60)
 Arc = st.number_input('Arc Angle', 0, 180,100)
 
-zoom_level = st.slider('Zoom (%)', 0, 100)
+zoom_level = st.sidebar.slider('Zoom (%)', 0, 100)
 
 zoom_level = zoom_level*2
 
