@@ -4,7 +4,7 @@ import pandas as pd
 from matplotlib.ticker import (AutoMinorLocator, FixedLocator)
 import streamlit as st
 import os
-import math
+#import math
 from matplotlib import transforms
 
 st.title("TNBS: MER Mapping Software")
@@ -30,7 +30,9 @@ PC_X = col2.number_input('PC X', 0.0, 200.0,100.0,0.5)
 PC_Y = col2.number_input('PC Y', 0.0, 200.0,88.5,0.5)
 PC_Z = col2.number_input('PC Z', 0.0, 200.0,100.0,0.5)
 
-AC_PC_length = math.dist([AC_Y,AC_Z],[PC_Y,PC_Z])
+#AC_PC_length = math.dist([AC_Y,AC_Z],[PC_Y,PC_Z])
+
+AC_PC_length = np.sqrt((PC_Y-AC_Y)**2 + (PC_Z-AC_Z)**2)
 
 st.write("AC/PC Length:", round(AC_PC_length,2))
 
@@ -148,7 +150,7 @@ AC_Z_coord = Z_ticks_convert_raw[np.where(Z_ticks_convert == AC_Z)[0][0]]
 PC_Y_coord = Y_ticks_convert_raw[np.where(Y_ticks_convert == PC_Y)[0][0]]
 PC_Z_coord = Z_ticks_convert_raw[np.where(Z_ticks_convert == PC_Z)[0][0]]
 
-trajectory_line_length = 25*math.sin(math.radians((180-Arc)/2))*192/AC_PC_length
+trajectory_line_length = 25*np.sin(np.deg2rad((180-Arc)/2))*192/AC_PC_length
 
 #trajectory_line_length = 25*192/AC_PC_length
 
@@ -157,13 +159,13 @@ trajectory_line_length = 25*math.sin(math.radians((180-Arc)/2))*192/AC_PC_length
 
 
 
-trajectory_end_Y = Y_coord-trajectory_line_length*math.cos(math.radians(Ring))
-trajectory_start_Z = Z_coord+trajectory_line_length*math.sin(math.radians(Ring))
-trajectory_start_Y = Y_coord+trajectory_line_length*math.cos(math.radians(Ring))
-trajectory_end_Z = Z_coord-trajectory_line_length*math.sin(math.radians(Ring))
+trajectory_end_Y = Y_coord-trajectory_line_length*np.cos(np.deg2rad(Ring))
+trajectory_start_Z = Z_coord+trajectory_line_length*np.sin(np.deg2rad(Ring))
+trajectory_start_Y = Y_coord+trajectory_line_length*np.cos(np.deg2rad(Ring))
+trajectory_end_Z = Z_coord-trajectory_line_length*np.sin(np.deg2rad(Ring))
 
-trajetory_tick_Y = trajectory_line_length/25*math.cos(math.radians(Ring))
-trajetory_tick_Z = trajectory_line_length/25*math.sin(math.radians(Ring))
+trajetory_tick_Y = trajectory_line_length/25*np.cos(np.deg2rad(Ring))
+trajetory_tick_Z = trajectory_line_length/25*np.sin(np.deg2rad(Ring))
 
 for i in range(51):
     
@@ -207,15 +209,18 @@ else:
 
 ax.plot(Y_coord, Z_coord, 'yellow', marker=".")
 
-rotation_angle = math.degrees(math.atan(np.abs(AC_Z-PC_Z)/np.abs(AC_Y-PC_Y)))
-init_angle = math.degrees(math.atan(MCP[1]/MCP[0]))
+rotation_angle = np.degrees(np.arctan(np.abs(AC_Z-PC_Z)/np.abs(AC_Y-PC_Y)))
+init_angle = np.degrees(np.arctan(MCP[1]/MCP[0]))
 
 new_angle = init_angle + rotation_angle
 
-MCP_origin_length = math.dist([0,0],[MCP[1],MCP[0]])
+#MCP_origin_length = math.dist([0,0],[MCP[1],MCP[0]])
 
-x_shift_factor = MCP_origin_length*math.cos(math.radians(new_angle))
-y_shift_factor = MCP_origin_length*math.sin(math.radians(new_angle))
+MCP_origin_length = np.sqrt((MCP[1]-0)**2 + (MCP[0]-0)**2)
+
+
+x_shift_factor = MCP_origin_length*np.cos(np.deg2rad(new_angle))
+y_shift_factor = MCP_origin_length*np.sin(np.deg2rad(new_angle))
 
 x_shift = MCP[0] - x_shift_factor
 y_shift = MCP[1] - y_shift_factor
@@ -225,8 +230,8 @@ for i in range(1,len(shapes)):
     x = df[df['shape_id'] == shapes[i]]['X']
     y = df[df['shape_id'] == shapes[i]]['Y']
     
-    x_rot = math.cos(math.radians(rotation_angle))*x - math.sin(math.radians(rotation_angle))*y
-    y_rot = math.sin(math.radians(rotation_angle))*x + math.cos(math.radians(rotation_angle))*y
+    x_rot = np.cos(np.deg2rad(rotation_angle))*x - np.sin(np.deg2rad(rotation_angle))*y
+    y_rot = np.sin(np.deg2rad(rotation_angle))*x + np.cos(np.deg2rad(rotation_angle))*y
               
     if background == "Black":                                                
         ax.plot(x_rot+x_shift, y_rot+y_shift, 'white', linewidth=0.5) 
