@@ -214,45 +214,45 @@ for i in range(51):
         
         
         if i == 35:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(10), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(10)+str("   ")+str(d10), fontsize=6)
         elif i == 34:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(9), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(9)+str("   ")+str(d9), fontsize=6)
         elif i == 33:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(8), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(8)+str("   ")+str(d8), fontsize=6)
         elif i == 32:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(7), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(7)+str("   ")+str(d7), fontsize=6)
         elif i == 31:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(6), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(6)+str("   ")+str(d6), fontsize=6)
         elif i == 30:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(5), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(5)+str("   ")+str(d5), fontsize=6)
         elif i == 29:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(4), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(4)+str("   ")+str(d4), fontsize=6)
         elif i == 28:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(3), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(3)+str("   ")+str(d3), fontsize=6)
         elif i == 27:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(2), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(2)+str("   ")+str(d2), fontsize=6)
         elif i == 26:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(1), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(1)+str("   ")+str(d1), fontsize=6)
         elif i == 25:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(0), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(0)+str("   ")+str(d0), fontsize=6)
         elif i == 24:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-1), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-1)+str("   ")+str(dm1), fontsize=6)
         elif i == 23:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-2), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-2)+str("   ")+str(dm2), fontsize=6)
         elif i == 22:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-3), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-3)+str("   ")+str(dm3), fontsize=6)
         elif i == 21:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-4), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-4)+str("   ")+str(dm4), fontsize=6)
         elif i == 20:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-5), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-5)+str("   ")+str(dm5), fontsize=6)
         elif i == 19:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-6), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-6)+str("   ")+str(dm6), fontsize=6)
         elif i == 18:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-7), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-7)+str("   ")+str(dm7), fontsize=6)
         elif i == 17:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-8), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-8)+str("   ")+str(dm8), fontsize=6)
         elif i == 16:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-9), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-9)+str("   ")+str(dm9), fontsize=6)
         elif i == 15:
             ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-10), fontsize=6)
             
@@ -262,43 +262,43 @@ for i in range(51):
         if i == 35:
             ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(10)+str("   ")+str(d10), fontsize=6)
         elif i == 34:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(9), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(9)+str("   ")+str(d9), fontsize=6)
         elif i == 33:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(8), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(8)+str("   ")+str(d8), fontsize=6)
         elif i == 32:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(7), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(7)+str("   ")+str(d7), fontsize=6)
         elif i == 31:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(6), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(6)+str("   ")+str(d6), fontsize=6)
         elif i == 30:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(5), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(5)+str("   ")+str(d5), fontsize=6)
         elif i == 29:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(4), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(4)+str("   ")+str(d4), fontsize=6)
         elif i == 28:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(3), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(3)+str("   ")+str(d3), fontsize=6)
         elif i == 27:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(2), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(2)+str("   ")+str(d2), fontsize=6)
         elif i == 26:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(1), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(1)+str("   ")+str(d1), fontsize=6)
         elif i == 25:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(0), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(0)+str("   ")+str(d0), fontsize=6)
         elif i == 24:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-1), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-1)+str("   ")+str(dm1), fontsize=6)
         elif i == 23:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-2), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-2)+str("   ")+str(dm2), fontsize=6)
         elif i == 22:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-3), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-3)+str("   ")+str(dm3), fontsize=6)
         elif i == 21:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-4), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-4)+str("   ")+str(dm4), fontsize=6)
         elif i == 20:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-5), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-5)+str("   ")+str(dm5), fontsize=6)
         elif i == 19:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-6), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-6)+str("   ")+str(dm6), fontsize=6)
         elif i == 18:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-7), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-7)+str("   ")+str(dm7), fontsize=6)
         elif i == 17:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-8), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-8)+str("   ")+str(dm8), fontsize=6)
         elif i == 16:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-9), fontsize=6)
+            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-9)+str("   ")+str(dm9), fontsize=6)
         elif i == 15:
             ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-10), fontsize=6)
 
