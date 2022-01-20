@@ -44,13 +44,13 @@ else:
 
 col_AC, col_PC = st.columns(2)
 
-st.subheader("AC Coordinates")
+#col_AC.subheader("AC Coordinates")
 
 AC_X = col_AC.number_input('AC X', 0.0, 200.0,100.0,0.5)
 AC_Y = col_AC.number_input('AC Y', 0.0, 200.0,111.5, 0.5)
 AC_Z = col_AC.number_input('AC Z', 0.0, 200.0,100.0, 0.5)
 
-st.subheader("PC Coordinates")
+#col_PC.subheader("PC Coordinates")
 
 PC_X = col_PC.number_input('PC X', 0.0, 200.0,100.0,0.5)
 PC_Y = col_PC.number_input('PC Y', 0.0, 200.0,88.5,0.5)
