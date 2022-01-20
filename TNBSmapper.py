@@ -16,6 +16,7 @@ st.info('By Srdjan Sumarac')
 st.image(Image.open('tnbs_logo.png'),width=150)
 
 st.sidebar.subheader("Patient Information")
+patient_name = st.sidebar.text_input("Patient Name")
 patient_id = st.sidebar.number_input("Patient ID (MER)",step=1)
 mrn = st.sidebar.number_input("MRN",step=1)
 sex = st.sidebar.selectbox("Sex",["","Male","Female"])
@@ -405,7 +406,7 @@ if invert == "Normal":
 
 
 
-labels1 = "Patient ID:"+str(int(patient_id))+"\n"+"MRN:"+str(int(mrn))+"\n"+"Sex: "+str(sex)+"\n"+"DOB: "+str(dob)+"\n"+"OP Date: "+str(op_date)+"\n"+"Surgeon: "+str(surgeon)
+labels1 = "Patient Name:"+str(patient_name)+"\n"+"Patient ID:"+str(int(patient_id))+"\n"+"MRN:"+str(int(mrn))+"\n"+"Sex: "+str(sex)+"\n"+"DOB: "+str(dob)+"\n"+"OP Date: "+str(op_date)+"\n"+"Surgeon: "+str(surgeon)
 labels2 = "Target: "+str(target)+"\n"+"Track: "+str(s_track)+"\n"+"Hemisphere: "+str(hemi)+"\n"+"AC(x,y,z): "+"("+str(AC_X)+", "+str(AC_Y)+", "+str(AC_Z)+")""\n"+"PC(x,y,z): "+"("+str(PC_X)+", "+str(PC_Y)+", "+str(PC_Z)+")""\n"+"Coord(x,y,z): "+"("+str(X)+", "+str(Y)+", "+str(Z)+")""\n"+"Ring Angle: "+str(Ring)+"°"+"\n"+"Arc Angle: "+str(Arc)+"°"+"\n"
 
 if invert == "Normal":
