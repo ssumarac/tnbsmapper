@@ -73,15 +73,12 @@ zoom_level = zoom_level*2
 
 path = os.getcwd()+"/STN_map.csv"
 
-def load_data(target,path):
-    if target == "STN":
-        df = pd.read_csv(path)
-    elif target == "GPi":
-        df = pd.read_csv(path)
-    else:
-        df = pd.read_csv(path)
-
-    return df
+if target == "STN":
+    df = pd.read_csv(path)
+elif target == "GPi":
+    df = pd.read_csv(path)
+else:
+    df = pd.read_csv(path)
 
 df = load_data(target,path)
 
