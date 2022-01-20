@@ -26,6 +26,7 @@ target = st.sidebar.selectbox('Target', ['STN', 'GPi', 'VIM'])
 disease = st.sidebar.selectbox('Disease', ["",'PD', 'CD', 'ET'])
 s_track = st.sidebar.selectbox("Track:",["s1","s2","s3","s4","s5","s6","s7","s8","s9","s10"])
 hemi = st.sidebar.selectbox("Hemisphere:",["Right", "Left"])
+start_mm = st.sidebar.selectbox("Starting Depth",["10mm","15mm"])
 
 st.sidebar.subheader("View")
 invert = st.sidebar.selectbox("Select normal/inverted view", ["Normal","Inverted"])
@@ -192,6 +193,13 @@ trajetory_tick_Z = trajectory_line_length/25*np.sin(np.deg2rad(Ring))
 
 st.sidebar.subheader("Annotations")
 
+if start_mm == "15mm": 
+    d15 = st.sidebar.text_input("15.0mm:")
+    d14 = st.sidebar.text_input("14.0mm:")
+    d13 = st.sidebar.text_input("13.0mm:")
+    d12 = st.sidebar.text_input("12.0mm:")
+    d11 = st.sidebar.text_input("11.0mm:")
+
 d10 = st.sidebar.text_input("10.0mm:")
 d9 = st.sidebar.text_input("9.0mm:")
 d8 = st.sidebar.text_input("8.0mm:")
@@ -218,7 +226,18 @@ for i in range(51):
     if invert == "Inverted":
         ax.plot(trajectory_end_Y+i*trajetory_tick_Y, trajectory_end_Z+i*trajetory_tick_Z, 'red', marker=(2, 0, Ring), markersize=5)
         
-        
+        if start_mm == "15mm":    
+            if i == 40:
+                ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(15)+str("   ")+str(d15), fontsize=6)
+            if i == 39:
+                ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(14)+str("   ")+str(d14), fontsize=6)
+            if i == 38:
+                ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(13)+str("   ")+str(d13), fontsize=6)
+            if i == 37:
+                ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(12)+str("   ")+str(d12), fontsize=6)
+            if i == 36:
+                ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(11)+str("   ")+str(d11), fontsize=6)
+
         if i == 35:
             ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(10)+str("   ")+str(d10), fontsize=6)
         elif i == 34:
@@ -259,12 +278,22 @@ for i in range(51):
             ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-8)+str("   ")+str(dm8), fontsize=6)
         elif i == 16:
             ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-9)+str("   ")+str(dm9), fontsize=6)
-        elif i == 15:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y+4,trajectory_end_Z+i*trajetory_tick_Z-3,str(-10), fontsize=6)
             
     else:
         ax.plot(trajectory_end_Y+i*trajetory_tick_Y, trajectory_end_Z+i*trajetory_tick_Z, 'red', marker=(2, 0, 180-Ring), markersize=5)
         
+        if start_mm == "15mm":    
+            if i == 40:
+                ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(15)+str("   ")+str(d15), fontsize=6)
+            if i == 39:
+                ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(14)+str("   ")+str(d14), fontsize=6)
+            if i == 38:
+                ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(13)+str("   ")+str(d13), fontsize=6)
+            if i == 37:
+                ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(12)+str("   ")+str(d12), fontsize=6)
+            if i == 36:
+                ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(11)+str("   ")+str(d11), fontsize=6)
+
         if i == 35:
             ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(10)+str("   ")+str(d10), fontsize=6)
         elif i == 34:
@@ -305,8 +334,6 @@ for i in range(51):
             ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-8)+str("   ")+str(dm8), fontsize=6)
         elif i == 16:
             ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-9)+str("   ")+str(dm9), fontsize=6)
-        elif i == 15:
-            ax.text(trajectory_end_Y+i*trajetory_tick_Y-5,trajectory_end_Z+i*trajetory_tick_Z+1,str(-10), fontsize=6)
 
 for i in range(11):
     
