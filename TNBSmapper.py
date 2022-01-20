@@ -19,7 +19,7 @@ st.sidebar.subheader("Patient Information")
 patient_id = st.sidebar.number_input("Patient ID (MER)",step=1)
 mrn = st.sidebar.number_input("MRN",step=1)
 sex = st.sidebar.selectbox("Sex",["","Male","Female"])
-dob = st.sidebar.date_input("DOB",value=(datetime(1900, 1, 1)),min_value=10, max_value=150)
+dob = st.sidebar.date_input("DOB",value=(datetime(1900, 1, 1)),min_value=(datetime(1900, 1, 1)), max_value=(datetime(2030, 1, 1)))
 
 st.sidebar.subheader("Surgery Information")
 op_date = st.sidebar.date_input("Operation Date")
