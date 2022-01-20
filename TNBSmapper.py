@@ -66,8 +66,8 @@ st.subheader("Final Targeting")
 X = st.number_input('X', 0.0, 200.0,100.0,0.5)
 Y = st.number_input('Y', 0.0, 200.0,100.0,0.5)
 Z = st.number_input('Z', 0.0, 200.0,100.0,0.5)
-Ring = st.number_input('Ring Angle', 0, 90,60)
-Arc = st.number_input('Arc Angle', 0, 180,100)
+Ring = st.number_input('Ring Angle', 0.0, 90.0,60.0)
+Arc = st.number_input('Arc Angle', 0.0, 180.0,100.0)
 
 zoom_level = st.slider('Zoom (%)', 0, 100)
 
