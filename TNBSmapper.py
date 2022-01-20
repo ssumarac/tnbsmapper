@@ -400,9 +400,14 @@ for i in range(1,len(shapes)):
 if invert == "Normal":
     ax.invert_xaxis()
 
-labels = "Patient ID:"+str(patient_id)+"\n"+"MRN:"+str(mrn)+"\n"+"Sex: "+str(sex)+"\n"+"DOB: "+str(dob)+"\n"+"OP Date: "+str(op_date)+"\n"+"Surgeon: "+str(surgeon)+"\n"+"Target: "+str(target)+"\n"+"Track: "+str(s_track)+"\n"+"Hemisphere: "+str(hemi)+"\n"+"AC(x,y,z): "+"("+str(AC_X)+","+str(AC_Y)+","+str(AC_Z)+")""\n"+"PC(x,y,z): "+"("+str(PC_X)+","+str(PC_Y)+","+str(PC_Z)+")""\n"+"Coord(x,y,z): "+"("+str(X)+","+str(Y)+","+str(Z)+")""\n"+"Ring Angle: "+str(Ring)+"°"+"\n"+"Arc Angle: "+str(Arc)+"°"+"\n"
-anchored_text1 = AnchoredText(labels, prop=dict(size=6,color='black'),loc=1)
+labels1 = "Patient ID:"+str(patient_id)+"\n"+"MRN:"+str(mrn)+"\n"+"Sex: "+str(sex)+"\n"+"DOB: "+str(dob)+"\n"+"OP Date: "+str(op_date)+"\n"+"Surgeon: "+str(surgeon)
+labels2 = "Target: "+str(target)+"\n"+"Track: "+str(s_track)+"\n"+"Hemisphere: "+str(hemi)+"\n"+"AC(x,y,z): "+"("+str(AC_X)+","+str(AC_Y)+","+str(AC_Z)+")""\n"+"PC(x,y,z): "+"("+str(PC_X)+","+str(PC_Y)+","+str(PC_Z)+")""\n"+"Coord(x,y,z): "+"("+str(X)+","+str(Y)+","+str(Z)+")""\n"+"Ring Angle: "+str(Ring)+"°"+"\n"+"Arc Angle: "+str(Arc)+"°"+"\n"
+anchored_text1 = AnchoredText(labels1, prop=dict(size=6,color='black'),loc=1)
+anchored_text2 = AnchoredText(labels2, prop=dict(size=6,color='black'),loc=3)
+
+
 ax.add_artist(anchored_text1)
+ax.add_artist(anchored_text2)
 
 st.write(fig)
 
