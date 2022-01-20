@@ -80,8 +80,6 @@ elif target == "GPi":
 else:
     df = pd.read_csv(path)
 
-df = load_data(target,path)
-
 shape_id = df['shape_id']
 shapes = df['shapes'].dropna()
 
