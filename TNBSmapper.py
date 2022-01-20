@@ -42,19 +42,19 @@ if background == "Black":
 else:
     mpl.rcParams['text.color'] = "black"
 
-col1, col2 = st.columns(2)
+col_AC, col_PC = st.columns(2)
 
-col1.subheader("AC Coordinates")
+col_AC.subheader("AC Coordinates")
 
-AC_X = col1.number_input('AC X', 0.0, 200.0,100.0,0.5)
-AC_Y = col1.number_input('AC Y', 0.0, 200.0,111.5, 0.5)
-AC_Z = col1.number_input('AC Z', 0.0, 200.0,100.0, 0.5)
+AC_X = col_AC.number_input('AC X', 0.0, 200.0,100.0,0.5)
+AC_Y = col_AC.number_input('AC Y', 0.0, 200.0,111.5, 0.5)
+AC_Z = col_AC.number_input('AC Z', 0.0, 200.0,100.0, 0.5)
 
-col2.subheader("PC Coordinates")
+col_PC.subheader("PC Coordinates")
 
-PC_X = col2.number_input('PC X', 0.0, 200.0,100.0,0.5)
-PC_Y = col2.number_input('PC Y', 0.0, 200.0,88.5,0.5)
-PC_Z = col2.number_input('PC Z', 0.0, 200.0,100.0,0.5)
+PC_X = col_PC.number_input('PC X', 0.0, 200.0,100.0,0.5)
+PC_Y = col_PC.number_input('PC Y', 0.0, 200.0,88.5,0.5)
+PC_Z = col_PC.number_input('PC Z', 0.0, 200.0,100.0,0.5)
 
 #AC_PC_length = math.dist([AC_Y,AC_Z],[PC_Y,PC_Z])
 
