@@ -31,10 +31,10 @@ hemi = st.sidebar.selectbox("Hemisphere:",["Right", "Left"])
 start_mm = st.sidebar.selectbox("Starting Depth",["10mm","15mm"])
 
 st.sidebar.subheader("View")
-invert = st.sidebar.selectbox("Select normal/inverted view", ["Normal","Inverted"])
-ticks = st.sidebar.selectbox("Show Ticks", ["Yes","No"])
-background = st.sidebar.selectbox("Select black/white background", ["Black","White"])
-which_trajectroy = st.sidebar.selectbox("Select trajectory line type", ["Not Angled","Angled"])
+invert = st.sidebar.selectbox("Select normal/inverted view", ["Normal","Inverted"],index=0)
+ticks = st.sidebar.selectbox("Show Ticks", ["Yes","No"],index=0)
+background = st.sidebar.selectbox("Select black/white background", ["Black","White"],index=0)
+which_trajectroy = st.sidebar.selectbox("Select trajectory line type", ["Not Angled","Angled"],index=0)
 
 if background == "Black":
     mpl.rcParams['text.color'] = "white"
