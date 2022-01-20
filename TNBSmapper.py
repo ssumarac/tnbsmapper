@@ -12,17 +12,17 @@ from matplotlib.offsetbox import AnchoredText
 from datetime import datetime
 
 st.title("TNBS: MER Mapping Software")
-st.info('By Srdjan Sumarac (E: sumaracsrdjan@gmail.com)')
+st.info('By Srdjan Sumarac')
 st.image(Image.open('tnbs_logo.png'),width=150)
 
 st.sidebar.subheader("Patient Information")
 patient_id = st.sidebar.number_input("Patient ID (MER)",step=1)
 mrn = st.sidebar.number_input("MRN",step=1)
 sex = st.sidebar.selectbox("Sex",["","Male","Female"])
-dob = st.sidebar.date_input("DOB", datetime.date(2019, 7, 6))
+dob = st.sidebar.date_input("DOB")
 
 st.sidebar.subheader("Surgery Information")
-op_date = st.sidebar.date_input("Operation Date",datetime.date(2019, 7, 6))
+op_date = st.sidebar.date_input("Operation Date")
 surgeon = st.sidebar.selectbox("Surgeon",["","SK","AL","MH"])
 target = st.sidebar.selectbox('Target', ['STN', 'GPi', 'VIM'])
 disease = st.sidebar.selectbox('Disease', ["",'PD', 'CD', 'ET'])
