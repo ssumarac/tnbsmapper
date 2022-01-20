@@ -140,8 +140,11 @@ if ticks == "Yes":
     ax.grid(which='major', color='darkblue', linestyle='--')
     ax.grid(which='minor', color='darkblue', linestyle=':')
 
-plt.xlabel("Y")
-plt.ylabel("Z",rotation=0)
+if invert == "Normal":
+    plt.xlabel("Anterior <- Y -> Posterior")
+    
+else:
+    plt.ylabel("Inferior <- Z -> Superior")
 
 ax.set_xticklabels(Y_ticks_axis)
 ax.set_yticklabels(Z_ticks_axis)
