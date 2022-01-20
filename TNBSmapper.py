@@ -21,14 +21,8 @@ mrn = st.sidebar.number_input("MRN",step=1)
 sex = st.sidebar.selectbox("Sex",["","Male","Female"])
 dob = st.sidebar.date_input("DOB",value=(datetime(1800, 1, 1)))
 
-today_date = datetime.today().strftime('%Y-%m-%d')
-today_date = today_date.split('-')
-today_day = today_date[-1]
-today_month = today_date[1]
-today_year = today_date[0]
-
 st.sidebar.subheader("Surgery Information")
-op_date = st.sidebar.date_input("Operation Date",value=(datetime(int(today_year), int(today_month), int(today_day))))
+op_date = st.sidebar.date_input("Operation Date")
 surgeon = st.sidebar.selectbox("Surgeon",["","SK","AL","MH"])
 target = st.sidebar.selectbox('Target', ['STN', 'GPi', 'VIM'])
 disease = st.sidebar.selectbox('Disease', ["",'PD', 'CD', 'ET'])
