@@ -71,14 +71,12 @@ zoom_level = st.slider('Zoom (%)', 0, 100)
 
 zoom_level = zoom_level*2
 
-path = os.getcwd()+"/STN_map.csv"
-
 if target == "STN":
-    df = pd.read_csv(path)
+    df = pd.read_csv(os.getcwd()+"/STN_map.csv")
 elif target == "GPi":
-    df = pd.read_csv(path)
+    df = pd.read_csv(os.getcwd()+"/GPi_map.csv")
 else:
-    df = pd.read_csv(path)
+    df = pd.read_csv(os.getcwd()+"/VIM_map.csv")
 
 shape_id = df['shape_id']
 shapes = df['shapes'].dropna()
