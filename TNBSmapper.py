@@ -407,7 +407,7 @@ if invert == "Normal":
 
 
 labels1 = "Patient ID:"+str(patient_id)+"\n"+"MRN:"+str(mrn)+"\n"+"Sex: "+str(sex)+"\n"+"DOB: "+str(dob)+"\n"+"OP Date: "+str(op_date)+"\n"+"Surgeon: "+str(surgeon)
-labels2 = "Target: "+str(target)+"\n"+"Track: "+str(s_track)+"\n"+"Hemisphere: "+str(hemi)+"\n"+"AC(x,y,z): "+"("+str(AC_X)+","+str(AC_Y)+","+str(AC_Z)+")""\n"+"PC(x,y,z): "+"("+str(PC_X)+","+str(PC_Y)+","+str(PC_Z)+")""\n"+"Coord(x,y,z): "+"("+str(X)+","+str(Y)+","+str(Z)+")""\n"+"Ring Angle: "+str(Ring)+"°"+"\n"+"Arc Angle: "+str(Arc)+"°"+"\n"
+labels2 = "Target: "+str(target)+"\n"+"Track: "+str(s_track)+"\n"+"Hemisphere: "+str(hemi)+"\n"+"AC(x,y,z): "+"("+str(AC_X)+", "+str(AC_Y)+", "+str(AC_Z)+")""\n"+"PC(x,y,z): "+"("+str(PC_X)+", "+str(PC_Y)+", "+str(PC_Z)+")""\n"+"Coord(x,y,z): "+"("+str(X)+", "+str(Y)+", "+str(Z)+")""\n"+"Ring Angle: "+str(Ring)+"°"+"\n"+"Arc Angle: "+str(Arc)+"°"+"\n"
 
 if invert == "Normal":
     anchored_text1 = AnchoredText(labels1, prop=dict(size=6,color='black'),loc=1)
