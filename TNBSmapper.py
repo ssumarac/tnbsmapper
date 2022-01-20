@@ -186,8 +186,6 @@ else:
 # ax.axes.xaxis.set_ticklabels([])
 # ax.axes.yaxis.set_ticklabels([])
 
-
-
 trajectory_end_Y = Y_coord-trajectory_line_length*np.cos(np.deg2rad(Ring))
 trajectory_start_Z = Z_coord+trajectory_line_length*np.sin(np.deg2rad(Ring))
 trajectory_start_Y = Y_coord+trajectory_line_length*np.cos(np.deg2rad(Ring))
