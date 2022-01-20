@@ -22,7 +22,7 @@ sex = st.sidebar.selectbox("Sex",["","Male","Female"])
 dob = st.sidebar.date_input("DOB", datetime.date(2019, 7, 6))
 
 st.sidebar.subheader("Surgery Information")
-op_date = st.sidebar.date_input("Operation Date",datetime.today())
+op_date = st.sidebar.date_input("Operation Date",datetime.date(2019, 7, 6))
 surgeon = st.sidebar.selectbox("Surgeon",["","SK","AL","MH"])
 target = st.sidebar.selectbox('Target', ['STN', 'GPi', 'VIM'])
 disease = st.sidebar.selectbox('Disease', ["",'PD', 'CD', 'ET'])
