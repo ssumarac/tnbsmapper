@@ -139,8 +139,14 @@ ax.xaxis.set_minor_locator(AutoMinorLocator(5))
 ax.yaxis.set_minor_locator(AutoMinorLocator(5))
 
 if ticks == "Yes":
-    ax.grid(which='major', color='darkblue', linestyle='--')
-    ax.grid(which='minor', color='darkblue', linestyle=':')
+
+    if background == "black":
+        ax.grid(which='major', color='darkblue', linestyle='--')
+        ax.grid(which='minor', color='darkblue', linestyle=':')
+    else:
+        ax.grid(which='major', color='lightgrey', linestyle='--')
+        ax.grid(which='minor', color='lightgrey', linestyle=':')
+
 
 if invert == "Normal":
     plt.xlabel("Anterior ← Y → Posterior")
