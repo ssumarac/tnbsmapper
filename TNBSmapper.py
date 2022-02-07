@@ -142,7 +142,7 @@ ax.yaxis.set_minor_locator(AutoMinorLocator(5))
 
 if ticks == "Yes":
 
-    if background == "black":
+    if background == "Black":
         ax.grid(which='major', color='darkblue', linestyle='--')
         ax.grid(which='minor', color='darkblue', linestyle=':')
     else:
