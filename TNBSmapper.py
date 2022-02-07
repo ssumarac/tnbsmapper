@@ -25,7 +25,7 @@ dob = st.sidebar.date_input("DOB",value=(datetime(1900, 1, 1)),min_value=(dateti
 st.sidebar.subheader("Surgery Information")
 op_date = st.sidebar.date_input("Operation Date")
 surgeon = st.sidebar.selectbox("Surgeon",["","SK","AL","MH"])
-target = st.sidebar.selectbox('Target', ['STN (s12.0)', 'GPi (s20.0)', 'VIM (s14.5)'])
+target = st.sidebar.selectbox('Target', ['STN (s12.0)', 'STN (s10.5)', 'GPi (s20.0)', 'VIM (s14.5)'])
 disease = st.sidebar.selectbox('Disease', ["",'PD', 'CD', 'ET', 'Other'])
 s_track = st.sidebar.selectbox("Track:",[" ","s1","s2","s3","s4","s5","s6","s7","s8","s9","s10"])
 hemi = st.sidebar.selectbox("Hemisphere:",["Right", "Left"])
@@ -77,7 +77,9 @@ zoom_level = zoom_level*2
 
 if target == "STN (s12.0)":
     df = pd.read_csv(os.getcwd()+"/STN_map.csv")
-elif target == "STN (s20.0)":
+elif target == "STN (s10.5)":
+    df = pd.read_csv(os.getcwd()+"/STN2_map.csv")
+elif target == "GPi (s20.0)":
     df = pd.read_csv(os.getcwd()+"/GPi_map.csv")
 else:
     df = pd.read_csv(os.getcwd()+"/VIM_map.csv")
