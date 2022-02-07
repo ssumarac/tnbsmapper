@@ -27,7 +27,7 @@ op_date = st.sidebar.date_input("Operation Date")
 surgeon = st.sidebar.selectbox("Surgeon",["","SK","AL","MH"])
 target = st.sidebar.selectbox('Target', ['STN', 'GPi', 'VIM'])
 disease = st.sidebar.selectbox('Disease', ["",'PD', 'CD', 'ET', 'Other'])
-s_track = st.sidebar.selectbox("Track:",["s1","s2","s3","s4","s5","s6","s7","s8","s9","s10"])
+s_track = st.sidebar.selectbox("Track:",[" ","s1","s2","s3","s4","s5","s6","s7","s8","s9","s10"])
 hemi = st.sidebar.selectbox("Hemisphere:",["Right", "Left"])
 start_mm = st.sidebar.selectbox("Starting Depth",["10mm","15mm"])
 
