@@ -17,7 +17,7 @@ st.image(Image.open('tnbs_logo.png'),width=150)
 
 st.sidebar.subheader("Patient Information")
 patient_name = st.sidebar.text_input("Patient Name")
-patient_id = st.sidebar.text_input("Patient ID (MER)",step=1)
+patient_id = st.sidebar.text_input("Patient ID (MER)")
 mrn = st.sidebar.text_input("MRN",step=1)
 sex = st.sidebar.selectbox("Sex",["","Male","Female"])
 dob = st.sidebar.date_input("DOB",value=(datetime(1900, 1, 1)),min_value=(datetime(1900, 1, 1)), max_value=(datetime(2030, 1, 1)))
