@@ -28,7 +28,7 @@ surgeon = st.sidebar.selectbox("Surgeon",["","SK","AL","MH"])
 target = st.sidebar.selectbox('Target', ['STN (s12.0)', 'STN (s10.5)', 'GPi (s20.0)', 'VIM (s14.5)'])
 disease = st.sidebar.text_input('Disease')
 s_track = st.sidebar.selectbox("Track:",[" ","s1","s2","s3","s4","s5","s6","s7","s8","s9","s10"])
-hemi = st.sidebar.selectbox("Hemisphere:",["Right", "Left"])
+hemi = st.sidebar.selectbox("Hemisphere:",[" ","Right", "Left"])
 start_mm = st.sidebar.selectbox("Starting Depth",["10mm","15mm"])
 
 st.sidebar.subheader("View")
