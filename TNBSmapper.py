@@ -46,15 +46,15 @@ col1, col2 = st.columns(2)
 
 col1.subheader("AC Coordinates")
 
-AC_X = float(col1.text_input('AC X', str(100))
-AC_Y = float(col1.text_input('AC Y', str(111.5))
-AC_Z = float(col1.text_input('AC Z', str(100))
+AC_X = float(col1.text_input('AC X', str(100)))
+AC_Y = float(col1.text_input('AC Y', str(111.5)))
+AC_Z = float(col1.text_input('AC Z', str(100)))
 
 col2.subheader("PC Coordinates")
 
-PC_X = float(col2.text_input('PC X', str(100))
-PC_Y = float(col2.text_input('PC Y',str(88.5))
-PC_Z = float(col2.text_input('PC Z', str(100))
+PC_X = float(col2.text_input('PC X', str(100)))
+PC_Y = float(col2.text_input('PC Y',str(88.5)))
+PC_Z = float(col2.text_input('PC Z', str(100)))
 
 #AC_PC_length = math.dist([AC_Y,AC_Z],[PC_Y,PC_Z])
 
@@ -65,11 +65,11 @@ st.write("AC/PC Length:", round(AC_PC_length,2))
 st.subheader("Final Targeting")
 #st.write("Enter either left or right coordinates")
 
-X = float(st.text_input('X', str(100))
-Y = float(st.text_input('Y', str(100))
-Z = float(st.text_input('Z', str(100))
-Ring = float(st.text_input('Ring Angle', str(60))
-Arc = float(st.text_input('Arc Angle', str(100))
+X = float(st.text_input('X', str(100)))
+Y = float(st.text_input('Y', str(100)))
+Z = float(st.text_input('Z', str(100)))
+Ring = float(st.text_input('Ring Angle', str(60)))
+Arc = float(st.text_input('Arc Angle', str(100)))
 
 zoom_level = st.slider('Zoom (%)', 0, 100)
 
