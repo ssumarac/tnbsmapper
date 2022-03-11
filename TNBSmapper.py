@@ -383,15 +383,15 @@ if background == "White":
     ax.plot([trajectory_end_Y,trajectory_start_Y], [trajectory_end_Z,trajectory_start_Z], 'black', linewidth=0.5)
 
     if show_moves == "Yes":
-        ax.plot([trajectory_end_Y+1,trajectory_start_Y+1], [trajectory_end_Z,trajectory_start_Z], 'k.', linewidth=0.5)
-        ax.plot([trajectory_end_Y-1,trajectory_start_Y-1], [trajectory_end_Z,trajectory_start_Z], 'k.', linewidth=0.5)
+        ax.plot([trajectory_end_Y+1,trajectory_start_Y+1], [trajectory_end_Z,trajectory_start_Z], 'black', linewidth=0.5)
+        ax.plot([trajectory_end_Y-1,trajectory_start_Y-1], [trajectory_end_Z,trajectory_start_Z], 'black', linewidth=0.5)
 
 else:
     ax.plot([trajectory_end_Y,trajectory_start_Y], [trajectory_end_Z,trajectory_start_Z], 'white', linewidth=0.5)
 
     if show_moves == "Yes":
-        ax.plot([trajectory_end_Y+1,trajectory_start_Y+1], [trajectory_end_Z,trajectory_start_Z], 'w.', linewidth=0.5)
-        ax.plot([trajectory_end_Y-1,trajectory_start_Y-1], [trajectory_end_Z,trajectory_start_Z], 'w.', linewidth=0.5)
+        ax.plot([trajectory_end_Y+1,trajectory_start_Y+1], [trajectory_end_Z,trajectory_start_Z], 'white', linewidth=0.5)
+        ax.plot([trajectory_end_Y-1,trajectory_start_Y-1], [trajectory_end_Z,trajectory_start_Z], 'white', linewidth=0.5)
 
 ax.plot(Y_coord, Z_coord, 'yellow', marker=".")
 
