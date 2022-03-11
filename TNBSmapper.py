@@ -379,19 +379,35 @@ ax.plot(AC_Y_coord, AC_Z_coord, 'blue', marker="s", mfc='none')
 
 ax.plot(MCP_Y_raw, MCP_Z_raw, 'purple', marker="s", mfc='none')
 
+
+### add multi-trajectory ###
+
+trajectory_end_Y_1mm_plus = Y_coord+1-trajectory_line_length*np.cos(np.deg2rad(Ring))
+trajectory_start_Y_1mm_plus = Y_coord+1+trajectory_line_length*np.cos(np.deg2rad(Ring))
+
+trajectory_end_Y_1mm_minus = Y_coord-1-trajectory_line_length*np.cos(np.deg2rad(Ring))
+trajectory_start_Y_1mm_minus = Y_coord-1+trajectory_line_length*np.cos(np.deg2rad(Ring))
+
 if background == "White":
     ax.plot([trajectory_end_Y,trajectory_start_Y], [trajectory_end_Z,trajectory_start_Z], 'black', linewidth=0.5)
 
     if show_moves == "Yes":
-        ax.plot([trajectory_end_Y+1,trajectory_start_Y+1], [trajectory_end_Z,trajectory_start_Z], 'black', linewidth=0.5)
-        ax.plot([trajectory_end_Y-1,trajectory_start_Y-1], [trajectory_end_Z,trajectory_start_Z], 'black', linewidth=0.5)
+        ax.plot([trajectory_end_Y_1mm_plus,trajectory_start_Y_1mm_plus], [trajectory_end_Z,trajectory_start_Z], 'black.', linewidth=0.5)
+        ax.plot([trajectory_end_Y_1mm_plus,trajectory_start_Y_1mm_plus], [trajectory_end_Z,trajectory_start_Z], 'black.', linewidth=0.5)
+
+        ax.plot([trajectory_end_Y_1mm_plus,trajectory_start_Y_1mm_minus], [trajectory_end_Z,trajectory_start_Z], 'black.', linewidth=0.5)
+        ax.plot([trajectory_end_Y_1mm_plus,trajectory_start_Y_1mm_minus], [trajectory_end_Z,trajectory_start_Z], 'black.', linewidth=0.5)
 
 else:
     ax.plot([trajectory_end_Y,trajectory_start_Y], [trajectory_end_Z,trajectory_start_Z], 'white', linewidth=0.5)
 
     if show_moves == "Yes":
-        ax.plot([trajectory_end_Y+1,trajectory_start_Y+1], [trajectory_end_Z,trajectory_start_Z], 'white', linewidth=0.5)
-        ax.plot([trajectory_end_Y-1,trajectory_start_Y-1], [trajectory_end_Z,trajectory_start_Z], 'white', linewidth=0.5)
+        ax.plot([trajectory_end_Y_1mm_plus,trajectory_start_Y_1mm_plus], [trajectory_end_Z,trajectory_start_Z], 'white.', linewidth=0.5)
+        ax.plot([trajectory_end_Y_1mm_plus,trajectory_start_Y_1mm_plus], [trajectory_end_Z,trajectory_start_Z], 'white.', linewidth=0.5)
+
+        ax.plot([trajectory_end_Y_1mm_plus,trajectory_start_Y_1mm_minus], [trajectory_end_Z,trajectory_start_Z], 'white.', linewidth=0.5)
+        ax.plot([trajectory_end_Y_1mm_plus,trajectory_start_Y_1mm_minus], [trajectory_end_Z,trajectory_start_Z], 'white.', linewidth=0.5)
+
 
 ax.plot(Y_coord, Z_coord, 'yellow', marker=".")
 
