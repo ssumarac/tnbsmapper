@@ -28,6 +28,7 @@ surgeon = st.sidebar.selectbox("Surgeon",["","SK","AL","MH"])
 target = st.sidebar.selectbox('Target', ['STN (s12.0)', 'STN (s10.5)', 'GPi (s20.0)', 'VIM (s14.5)'])
 disease = st.sidebar.text_input('Disease')
 s_track = st.sidebar.selectbox("Track:",[" ","s1","s2","s3","s4","s5","s6","s7","s8","s9","s10"])
+show_moves = st.sidebar.selectbox("Show mutliple tracks:",["No","Yes"])
 hemi = st.sidebar.selectbox("Hemisphere:",[" ","Right", "Left"])
 start_mm = st.sidebar.selectbox("Starting Depth",["10mm","15mm"])
 
@@ -380,9 +381,17 @@ ax.plot(MCP_Y_raw, MCP_Z_raw, 'purple', marker="s", mfc='none')
 
 if background == "White":
     ax.plot([trajectory_end_Y,trajectory_start_Y], [trajectory_end_Z,trajectory_start_Z], 'black', linewidth=0.5)
+
+    if show_moves == "Yes":
+        ax.plot([trajectory_end_Y+1,trajectory_start_Y+1], [trajectory_end_Z,trajectory_start_Z], 'k.', linewidth=0.5)
+        ax.plot([trajectory_end_Y-1,trajectory_start_Y-1], [trajectory_end_Z,trajectory_start_Z], 'k.', linewidth=0.5)
+
 else:
     ax.plot([trajectory_end_Y,trajectory_start_Y], [trajectory_end_Z,trajectory_start_Z], 'white', linewidth=0.5)
 
+    if show_moves == "Yes":
+        ax.plot([trajectory_end_Y+1,trajectory_start_Y+1], [trajectory_end_Z,trajectory_start_Z], 'w.', linewidth=0.5)
+        ax.plot([trajectory_end_Y-1,trajectory_start_Y-1], [trajectory_end_Z,trajectory_start_Z], 'w.', linewidth=0.5)
 
 ax.plot(Y_coord, Z_coord, 'yellow', marker=".")
 
